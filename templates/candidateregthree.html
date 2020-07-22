@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, mimimun-scale=1.0">
+    <title>Candidate Registration Three</title>
+    <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.fontself.com/gE309jx/gilbert-color-bold-preview5.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.12.1/js/all.js"></script>
+    <style>
+        .box {
+            border: 1px solid #D95179;
+            margin: 20%; 
+            margin-top: 20px;
+            box-shadow: 0px 2px 4px rgba(0,0,0,0.18);
+            text-align: center;
+        }
+
+        @media(max-width: 580px) {
+          .box {
+            margin: 10%;
+          }
+        }
+
+        .skip {
+            text-align: right;
+            font-family: roboto;
+            font-style: normal;
+            font-weight: bold;
+            color: #D95179;
+            margin-bottom: 20px;
+        }
+
+        .title {
+              font-family: roboto;
+            font-size: 60px;
+            font-style: normal;
+            font-weight: bold;
+            color: black;
+            margin-bottom: 50px;
+        }
+
+        .input-control {
+           margin-bottom: 10px;
+           margin-right: 8px;
+           padding: 4px;
+           margin-top: -4px;
+           outline: none;
+           resize: none; 
+           border-radius: 5px; 
+           border: 0.75px solid #949494;
+           font-family: roboto;
+           font-weight: 300;
+           height: 35px;
+           width: 300px;
+           font-size: 20px;
+        }
+
+        @media(max-width: 420px) {
+            .input-control {
+                width: 230px;
+          }
+        }
+
+        .input-control:focus{border-color: #D95179; box-shadow: 0 0 10px #D95179;}
+
+
+        .submit-button {
+            background: rgba(217,81,121,0.20);
+            padding: 15px 20px;
+            border: none;
+            font-family: roboto;
+            color: #D95179;
+            font-weight: 700;
+            font-style: normal;
+            letter-spacing: 0.03em;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 5%;
+            box-shadow: 0px 2px 4px rgba(0,0,0,0.18)
+            margin-bottom: 50px !important;
+            margin-top: 20px; 
+        }
+
+        ::-webkit-input-placeholder { /* Edge */
+              color: #949494;
+              font-family: roboto;
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 300;
+            }
+
+            :-ms-input-placeholder { /* Internet Explorer 10-11 */
+              color: #949494;
+              font-family: roboto;
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 300;
+            }
+
+            ::placeholder {
+              color: #949494;
+              font-family: roboto;
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 300;
+            }
+        [placeholder]:focus::-webkit-input-placeholder {
+          transition: opacity 0.5s 0.5s ease; 
+          opacity: 0;
+        }
+
+    </style>
+</head>
+<body>
+
+    <section class="one">
+        <div class="d-flex p-2 box">
+            <a href="#"><h1 class="skip">SKIP</h1></a>
+            <h1 class="title">Situational Info</h1>
+        	<form method="POST" action="" enctype="multipart/form-data">
+        	    {{ form.hidden_tag() }}
+
+        	    <div class="">
+                <input type="text" id="search-term"
+                        {{ form.location (class="is-invalid input-control", placeholder="Location")}}
+                </div>
+                <div class="">
+                    {{ form.role_type(class="input-control", placeholder="Role Type") }}
+                </div>
+                <div class="">
+                    {{ form.international(class="input-control") }}
+                </div>
+                <div class="">
+                    {{ form.english(class="input-control") }}
+                </div>
+                <div class="">
+                    {{ form.other_language(class="input-control") }}
+                </div>
+
+                {{ form.submit(class="submit-button", value="NEXT") }}
+        	</form>
+        </div>
+    </section>
+<script type="text/javascript">
+    function activatePlacesSearch(){
+        var input = document.getElementById('search-term');
+        var autocomplete = new google.maps.places.Autocomplete(input);
+
+    }
+</script>
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyArQCmQm-hnuge64lA3F2XZeGwhfuKJxq8&libraries=places&callback=activatePlacesSearch"></script>
+</body>
+</html>

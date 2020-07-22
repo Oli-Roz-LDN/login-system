@@ -1,0 +1,17 @@
+{% block content %}
+<a class="button-nav" href="/logout">Log Out</a>
+<section>
+    <div class="columns">
+        <div class="column is-2"></div>
+        <div class="column is-4">
+            <div class="card-one">
+                <hr class="hr-one">
+                <h1 class="profile-card">GURU I.D. # 100{{ current_user.id }}</h1>
+                <hr class="hr-one">
+                <h1 class="profile-card-two">{{ current_user.email }}</h1>
+                <br>
+            </div>
+        </div>
+        <div class="column is-2"></div>
+</section>
+{% endblock %}

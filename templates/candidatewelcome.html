@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, mimimun-scale=1.0">
+	<title>Candidate Welcome</title>
+    <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.fontself.com/gE309jx/gilbert-color-bold-preview5.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.12.1/js/all.js"></script>
+    <style>
+    	.box {
+    		border: 1px solid #D95179;
+    		margin: 20%; 
+    		margin-top: 20px;
+    		box-shadow: 0px 2px 4px rgba(0,0,0,0.18);
+    		text-align: center;
+    	}
+
+        @media(max-width: 700px) {
+            .box {
+                margin: 5%;
+          }
+        }
+
+    	.title {
+    		font-family: roboto;
+            font-size: 40px;
+            font-style: normal;
+            font-weight: bold;
+            color: black;
+            margin-bottom: 10px;
+    	}
+
+    	.sub-header {
+            font-family: roboto;
+            font-size: 25px;
+            font-style: normal;
+            font-weight: bold;
+            color: black;
+            margin-top: 10px;
+        }
+
+        .text {
+        	font-family: roboto;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 300;
+            color: black;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+
+        .submit-button {
+            background: rgba(217,81,121,0.20);
+            padding: 15px 20px;
+            border: none;
+            font-family: roboto;
+            color: #D95179;
+            font-weight: 700;
+            font-style: normal;
+            letter-spacing: 0.03em;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 5%;
+            box-shadow: 0px 2px 4px rgba(0,0,0,0.18)
+            margin-bottom: 50px !important;
+        }
+
+        .skip {
+        	text-align: right;
+        	font-family: roboto;
+        	font-style: normal;
+        	font-weight: bold;
+        	color: #D95179;
+        	margin-bottom: 0px;
+        }
+    </style>
+</head>
+<body>
+	<section class="one">
+		<div class="d-flex p-2 box">
+			<a href="#"><h1 class="skip">SKIP</h1></a>
+			<h1 class="title">Welcome to the Squad revolution!</h1>
+			<img style="width: 400px; margin-top: -20px;" src="{{ url_for('static', filename='welcome.png') }}">
+			<h1 class="sub-header">Build your profile!</h1>
+			<h1 class="text">To ensure we are able to match you with the most relevant opportunities, we need a few more details from you!</h1>
+			<a href="candidateregistrationone"><button class="submit-button">LETS GET STARTED</button></a>
+		</div>
+	</section>
+</body>
+</html>

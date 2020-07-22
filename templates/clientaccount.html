@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+
+<section class="one">
+    <h1 class="one-title">Want to update some info?</h1>
+    <h1 class="one-sub">
+        Edit the form below and click update
+    </h1>
+</section>
+
+
+    <section class="two">
+    	<div class="columns">
+    		<div class="column is-3"></div>
+    		<div class="column is-6">
+    			<form method="POST" action="" enctype="multipart/form-data">
+	            {{ form.hidden_tag() }}
+                    <div class="card">
+                        <div class="has-text-left">
+                            <h1 class="info-card" style="margin-top: 20px;">EMAIL {{ form.email(class="info-card-answer-email") }}</h1>
+                        </div>
+                        <div class="has-text-left">
+                            <h1 class="info-card" style="margin-top: 20px;">USERNAME {{ form.username(class="info-card-answer-email") }}</h1>
+                        </div>
+
+                    </div>
+	            <div class="form-group has-text-centered" style="margin-bottom: 40px;">
+	            		{{ form.submit(class="label-button", value="UPDATE") }}
+	            </div>
+	        </form>
+    		</div>
+    	</div>
+    </section>
+	{% endblock content %}
+
+</body>
+</html>

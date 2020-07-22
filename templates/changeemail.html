@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Change Email</title>
+</head>
+<body>
+
+<section class="two">
+	<div class="columns">
+		<div class="column is-3"></div>
+		<div class="column is-6">
+			<form method="POST" action="" enctype="multipart/form-data">
+	            {{ form.hidden_tag() }}
+
+	            <fieldset class="form-group">
+	            	<div class="form-group">
+	            		{{ form.email.label(class="form-control-label") }}
+	                    {% if form.email.errors %}
+	                        {{ form.email(class="form-control form-control-lg is-invalid") }}
+	                        <div class="invalid-feedback">
+	                            {% for error in form.email.errors %}
+	                                <span>{{ error }}</span>
+	                            {% endfor %}
+	                        </div>
+	                    {% else %}
+	                        {{ form.email(class="form-control form-control-lg", style="font-family: roboto; font-size: 16px; color: black; font-weight: 300; border-bottom: 1px solid #D95179; outline: none; resize: none; letter-spacing: -0.025em;") }}
+	                    {% endif %}
+	                </div>
+	            </fieldset>
+		        <div class="form-group">
+		            {{ form.submit(class="label-button", value="UPDATE") }}
+	                <a class="delete-button" href="/delete-account">DELETE ACCOUNT</a>
+	            </div>
+	    </form>
+		</div>
+	</div>
+</section>
+
+{% endblock content %}
+</body>
+</html>
