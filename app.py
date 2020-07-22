@@ -18,12 +18,12 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite3'
 app.config['SECRET_KEY'] = 'cairocoders-ednalan'
 app.config['OAUTH_CREDENTIALS'] = {
     'facebook': {
-        'id': '325608745121861',
-        'secret': 'fb0c762aed21538916f38d39a941c2fb'
+        'id': 'YOUR_ID',
+        'secret': 'YOUR_SECRET_KEY'
     },
     'google': {
-        'id': '1063079074299-d47jcmg27v89aknha31g674619kie82q.apps.googleusercontent.com',
-        'secret': 'SW9SGGpaD3sXVFWZ9DFJ3qth'
+        'id': 'YOUR_ID',
+        'secret': 'YOUR_SECRET_KEY'
     },
 }
 
